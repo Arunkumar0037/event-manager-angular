@@ -1,0 +1,74 @@
+<div class="container-fluid">
+
+
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-12">
+
+            <div class="wrapper">
+                <mat-card class="demo-inline-calendar-card">
+                    <mat-calendar [(selected)]="selected" (click)="getSlots()"></mat-calendar>
+                </mat-card>
+            </div>
+        </div>
+        <div class="col-lg-9 col-md-3 col-sm-12">
+            <div class="wrapper">
+                <div class="header-content">
+                    <div class="fo-left d-flex">
+                        <div class="img-section">
+                            <i class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="title">
+                            <h4>Evening</h4>
+                            <p>9.00 AM to 12.00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="fo-btn">
+                        <button type="button" class="btn btn-light" (click)="addEditService(1)"> + Add new</button>
+                    </div>
+                </div>
+
+                <div *ngIf="timeSlotsMorning.length> 0; else noSlotsMorning" class="body-content">
+                    <div class="time-wrapper" *ngFor="let slot of timeSlotsMorning">
+                        <div class="fo-slot">
+                            <p>{{slot.startTime | date:'hh:mm a'}}</p>
+                        </div>
+                    </div>
+
+                </div>
+                <ng-template #noSlotsMorning>
+                    <div class="body-content">
+                        No Slots Found
+                    </div>
+                </ng-template>
+
+            </div>
+            <div class="wrapper">
+                <div class="header-content">
+                    <div class="fo-left d-flex">
+                        <div class="img-section">
+                            <i class="fa fa-cog fa-5x" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="title">
+                            <h4>Evening</h4>
+                            <p>5.00 AM to 09.00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="fo-btn">
+                        <button type="button" class="btn btn-light" (click)="addEditService(2)"> + Add new</button>
+                    </div>
+                </div>
+
+                <div div *ngIf="timeSlotsEvening.length > 0; else noSlotsMorning" class="body-content">
+                    <div class="time-wrapper" *ngFor="let slot of timeSlotsEvening">
+                        <div class="fo-slot">
+                            <p>{{slot.startTime | date:'hh:mm a'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

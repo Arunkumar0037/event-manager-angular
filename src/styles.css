@@ -1,1 +1,72 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #d4d4d4;
+}
+
+.wrapper{
+    background-color: #ffffff;
+    padding:15px;
+}
+
+.title {
+    padding: 10px;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.body-content {
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.time-wrapper {
+    padding: 10px 20px;
+    background: white;
+    width: 19%;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 11px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fo-slot p {
+    margin-bottom: 0;
+}
+.fo-btn button.btn.btn-light {
+    color: #4155f1;
+    font-weight: 600;
+    cursor: pointer;
+}
+.time-wrapper:hover {
+    background: #4155f1;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}

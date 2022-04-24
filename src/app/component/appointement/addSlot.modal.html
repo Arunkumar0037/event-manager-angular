@@ -1,0 +1,17 @@
+<h1 style="padding-left: 18px;">ADD SLOT</h1>
+
+
+<div class="slotTitle">
+    <h3>From Time</h3>
+    <h3>To Time</h3>
+</div>
+<div class="slotTitle">
+    <timepicker class='float: left' #varFromTime [(ngModel)]="fromTime" [showSpinners]="true" [min]="minTime" [showMeridian]="false" (click)="checkMaxTime()"></timepicker>
+    <timepicker class='float: right' #varToTime [(ngModel)]="toTime" [showSpinners]="true" [max]="maxTime" [disabled]="true" [showMeridian]="false"></timepicker>
+</div>
+
+<div class="fo-button">
+    <button type="button" class="btn btn-primary create" (click)="saveSlot()">Save</button>
+    <button type="button" class="btn btn-secondary create" (click)="closeDialog()">Cancel</button>
+</div>
+
